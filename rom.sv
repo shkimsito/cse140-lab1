@@ -35,7 +35,8 @@ module rom(
 //  data = mem(addr)	   [ ]
 
 // ------------------------------------------
-    out = mem(addr)
+  assign out = mem[addr];
+  assign data = mem[addr];
 
 // ------------------------------------------
 

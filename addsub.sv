@@ -16,10 +16,7 @@ module addsub #(parameter dw=8)		 // dw = data width
 //0             dataa - datab;
 
 // ------------------------------------------
-if (add_sub)
-  assign result = dataa + datab;
-else
-  assign result = dataa - datab;
+  assign result = add_sub ? dataa + datab : dataa - datab;
 // ------------------------------------------
 
 endmodule

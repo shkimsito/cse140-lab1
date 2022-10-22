@@ -3,7 +3,6 @@ module mux5 (input        d0, d1, d2, d3, d4,
              input [2:0]  s, 
              output logic y);
 
-always_comb begin   // always @(*)    // always @(d0, d1, d2, d3, d4, s);
 // fill in guts
 // when using always_comb, be sure to cover all cases & use =, not <=
 // case(s)
@@ -20,17 +19,17 @@ always_comb begin   // always @(*)    // always @(d0, d1, d2, d3, d4, s);
 //  5	   0
 //  6	   0
 //  7	   0	    s = 3'b111
-end
 
 // ------------------------------------------
 always_comb begin   // always @(*)    // always @(d0, d1, d2, d3, d4, s);
-case(s)
+  case(s)
     0: y = d0;
     1: y = d1;
     2: y = d2;
     3: y = d3;
     4: y = d4;
     default: y = 0;
+endcase
 end
 // ------------------------------------------
 

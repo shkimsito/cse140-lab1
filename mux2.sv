@@ -13,7 +13,6 @@ module mux2 #(parameter WIDTH = 8)
 // 1   d1	y[7:0] = d1[7:0]
 
 // ------------------------------------------
-combinational (unclocked) logic -- use =, not <=
 always_comb y[7:0] = (!s ? d0[7:0] : d1[7:0]);
 // ------------------------------------------
 

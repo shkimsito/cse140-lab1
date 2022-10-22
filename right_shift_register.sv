@@ -21,9 +21,10 @@ module right_shift_register #(parameter WIDTH = 16)(
 
   // ------------------------------------------
   always @(posedge clk) begin
-  if(enable) begin
-    out[WIDTH-1:0] <= in;
-    assign out = mode ? out>>1 : out>>>1;
+    if(enable) begin
+      out[WIDTH-1:0] <= in;
+      assign out = mode ? out>>1 : out>>>1;
+    end
   end
   // ------------------------------------------
 

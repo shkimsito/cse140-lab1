@@ -18,10 +18,7 @@ module counter_down	#(parameter dw=8, WIDTH=7)
 //  0      0       hold
 
   // ------------------------------------------
-  if (reset) begin
-    result <= WIDTH;
-  else if (ena)
-    result <= result - 1
+      result <= reset ? WIDTH : (ena? result - 1 : result);
   // ------------------------------------------
 
   end

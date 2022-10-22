@@ -19,9 +19,9 @@ module register # (parameter N = 8)
 //     0       1      in   (update output)
 
    // ------------------------------------------
-   if (clear) begin
+    if (clear)
       out <= 0;
-   else if (load == 1) begin
+    else if (load)
       out <= in;
    // ------------------------------------------
 

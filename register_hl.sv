@@ -27,10 +27,11 @@ module register_hl # (parameter N = 16)
 
   // ------------------------------------------
   always_ff @ (posedge clk, posedge clear) begin
-  if(clear) out[N-1:0] <= 0;
-  else begin
-    if (loadh) out[N-1:N/2] <= inh;
-    if (loadl) out[N/2-1:0] <= inl;
+    if(clear) out[N-1:0] <= 0;
+    else begin
+      if (loadh) out[N-1:N/2] <= inh;
+      if (loadl) out[N/2-1:0] <= inl;
+    end
   end
   // ------------------------------------------
 
