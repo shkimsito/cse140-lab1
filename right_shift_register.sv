@@ -22,10 +22,8 @@ module right_shift_register #(parameter WIDTH = 16)(
   // ------------------------------------------
   always @(posedge clk) begin
   if(enable) begin
-    out[WIDTH-1:0] <= load;
+    out[WIDTH-1:0] <= in;
     assign out = mode ? out>>1 : out>>>1;
-    if(mode) assign out = out>>1; // logical right shift by one bit
-    else assign out = out>>>1;    // arithmetic right shift by one bit.
   end
   // ------------------------------------------
 
